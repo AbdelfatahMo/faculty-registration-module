@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    <record id="skill_view_form" model="ir.ui.view">
+        <field name="name">skill.view.form</field>
+        <field name="model">student.skill</field>
+        <field name="arch" type="xml">
+            <form >
+                <sheet>
+                    <group>
+                       
+                            <field name="name" />
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="skill_view_tree" model="ir.ui.view">
+        <field name="name">skill.view.tree</field>
+        <field name="model">student.skill</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+        
+
+
+
+
+    <record id="skill_action" model="ir.actions.act_window">
+        <field name="name">Skills</field>
+        <field name="res_model">student.skill</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+        <p class="o_view_noncontent_smiling_face" >
+        Enter skills For students!
+        </p>
+
+            
+        </field>
+    </record>
+
+    
+    </data>
+    
+
+</odoo>

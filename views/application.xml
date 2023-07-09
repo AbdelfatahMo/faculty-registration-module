@@ -1,0 +1,103 @@
+<odoo>
+  <data>
+
+    <!-- Form for Patient Details -->
+    <record id="application_info_form" model="ir.ui.view">
+      <field name="name">Applications.form</field>
+      <field name="model">application.info</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="name" />
+                <field name="address" />
+                <field name="national_number" />
+
+              </group>
+
+
+              <group>
+                <field name="pesonal_image" />
+                <field name="age" />
+                <field name='date_of_birth' />
+              </group>
+
+
+              <group>
+                <field name="secondary_certification_image" />
+                <field name="degree_with_precent" />
+                <field name="degree_with_numbers" />
+              </group>
+
+              <group>
+                <field name="height" />
+                <field name="weight" />
+              </group>
+
+              <group>
+                <field name="memeber_of_family_ids" string='Family memebers' />
+              </group>
+              <group>
+                <field name="faculty_ids" />
+                <field name="expected_faculty" />
+                <field name="desired_faculty" />
+                <field name="reason_of_desired" />
+              </group>
+
+              <group></group>
+
+              <group>
+                <!-- <field name="skill_ids" /> -->
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Tree for Patient Details -->
+    <record id="application_info_tree" model="ir.ui.view">
+      <field name="name">Applications.tree</field>
+      <field name="model">application.info</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="address" />
+          <field name="national_number" />
+          <field name="pesonal_image" />
+          <field name="age" />
+          <field name='date_of_birth' />
+          <field name="secondary_certification_image" />
+          <field name="degree_with_precent" />
+          <field name="degree_with_numbers" />
+          <field name="height" />
+          <field name="weight" />
+          <field name="number_of_family" />
+          <!-- <field name="memeber_of_family_ids" /> -->
+          <field name="family_memeber_age" />
+          <!-- <field name="faculty_ids" /> -->
+          <field name="expected_faculty" />
+          <field name="desired_faculty" />
+          <field name="reason_of_desired" />
+          <!-- <field name="skill_ids" /> -->
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="application_info_act_window" model="ir.actions.act_window">
+      <field name="type">ir.actions.act_window</field>
+      <field name="name">Applications</field>
+      <field name="res_model">application.info</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type='html'>
+        <p class='o_view_noncontent_smiling_face'>
+          Enter first Student application Information!
+        </p>
+      </field>
+    </record>
+
+
+  </data>
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <!-- Root menu -->
+        <menuitem
+            id="registration_root_menu"
+            name="Faculty Registration"
+            web_icon='faculty_registration,static/description/icon.png'
+            sequence="-10" />
+
+        <!-- Subs from root -->
+        <menuitem
+            id="student_menu"
+            name="Introduce Application"
+            action="application_info_act_window"
+            parent="registration_root_menu"
+            sequence="0" />
+
+        <menuitem
+            id="family_memeber_menu"
+            name="Family Memebers"
+            action="family_action"
+            parent="registration_root_menu"
+            sequence="1" />
+
+        <menuitem
+            id="faculty_menu"
+            name="Faculties"
+            action="faculty_action"
+            parent="registration_root_menu"
+            sequence="2" />
+
+        <menuitem
+            id="skill_menu"
+            name="Skills"
+            action="skill_action"
+            parent="registration_root_menu"
+            sequence="3" />
+
+
+    </data>
+
+
+</odoo>

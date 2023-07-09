@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+application_info_registration,faculty_registration.application_info,model_application_info,,1,1,1,1
+registration_faculty_registration,faculty_registration.registration_faculty,model_registration_faculty,,1,1,1,1
+family_memeber_registration,faculty_registration.family_memeber,model_family_memeber,,1,1,1,1
+student_skill_registration,faculty_registration.student_skill,model_student_skill,,1,1,1,1
