@@ -8,50 +8,65 @@
       <field name="arch" type="xml">
         <form>
           <sheet>
-            <group>
-              <group>
+            <field name="pesonal_image" widget="image" class="oe_avatar" />
+            <div class="oe_title">
+              <h1>
+                <field name="ref" />
+              </h1>
+              <label for='name' class="oe_edit_only">Name</label>
+              <h2>
                 <field name="name" />
-                <field name="address" />
-                <field name="national_number" />
+              </h2>
+            </div>
 
-              </group>
-
-
-              <group>
-                <field name="pesonal_image" />
+            <group>
+              <group string="Personal Info">
+                <field name="national_id" />
                 <field name="age" />
                 <field name='date_of_birth' />
+                <field name="address" />
               </group>
 
 
-              <group>
+              <group string="Education Info">
                 <field name="secondary_certification_image" />
                 <field name="degree_with_precent" />
                 <field name="degree_with_numbers" />
               </group>
 
-              <group>
+              <group string="Physical Info">
                 <field name="height" />
                 <field name="weight" />
               </group>
 
               <group>
-                <field name="memeber_of_family_ids" string='Family memebers' />
-              </group>
-              <group>
-                <field name="faculty_ids" />
                 <field name="expected_faculty" />
-                <field name="desired_faculty" />
                 <field name="reason_of_desired" />
               </group>
 
-              <group></group>
-
               <group>
-                <!-- <field name="skill_ids" /> -->
               </group>
             </group>
+            <notebook>
+              <page name="family" string="Family">
+                <field name="memeber_of_family_ids" />
+              </page>
+
+              <page name="skills" string="Skills">
+                <field name="skill_ids" widget="many2many" />
+              </page>
+
+              <page name="desired_faculties" string="Desired Faculties">
+                <field name="desired_faculty_ids" />
+              </page>
+
+            </notebook>
           </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers" />
+            <field name="activity_ids" widget="mail_activity" />
+            <field name="message_ids" widget="mail_thread" />
+          </div>
         </form>
       </field>
     </record>
@@ -62,23 +77,19 @@
       <field name="model">application.info</field>
       <field name="arch" type="xml">
         <tree>
+          <field name="ref" />
           <field name="name" />
+          <field name="national_id" />
           <field name="address" />
-          <field name="national_number" />
-          <field name="pesonal_image" />
           <field name="age" />
-          <field name='date_of_birth' />
-          <field name="secondary_certification_image" />
           <field name="degree_with_precent" />
           <field name="degree_with_numbers" />
           <field name="height" />
           <field name="weight" />
           <field name="number_of_family" />
           <!-- <field name="memeber_of_family_ids" /> -->
-          <field name="family_memeber_age" />
           <!-- <field name="faculty_ids" /> -->
           <field name="expected_faculty" />
-          <field name="desired_faculty" />
           <field name="reason_of_desired" />
           <!-- <field name="skill_ids" /> -->
         </tree>
